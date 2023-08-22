@@ -2,10 +2,10 @@
 
 ## Description
 - Link challenge: https://baby-inject.fptunisecathon2023.tech/
-- Ảnh: ![image](img/1.png)
+![image](img/1.png)
 
 ## Solution
-- Đầu tiên, với tên đề bài là `Baby Injection`, mình nghĩ tới một trong các lỗi SQL Injection, Command Injection, XSS, ... Tuy nhiên sau khi thử với các lỗi trên, cái thì không hoạt động, cái thì không đưa tới đâu. Vậy nên mình đã nghĩ tới một lỗi khác: `SSTI (Server-side template injection)`.
+- Đầu tiên, với endpoint là `/render`, mình theo linh cảm nghĩ tới lỗi: `SSTI (Server-side template injection)`.
 - Để kiểm tra xem có phải là lỗi SSTI hay không, mình sẽ thử với payload `{{7*7}}` để xem kết quả trả về có phải là `49` hay không. Và kết quả trả về là `49` => Đây là lỗi SSTI.
 - SSTI được chia làm nhiều loại với các loại template engine khác nhau tùy thuộc vào các ngôn ngữ như PHP, Python,... và với bài này, mình xác định đây là 1 template engine của PHP dựa vào response từ server mỗi khi request. 
 ![image](img/2.png)
