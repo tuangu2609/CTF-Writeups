@@ -95,7 +95,9 @@ Cụ thể các bạn hãy đọc trong 2 link mà mình đã mention ở phía 
 }
 ```
 và chúng ta có reverse shell.
+
 ![shell](./img/20.png)
 
 cuối cùnglấy được flag nhờ execute file getFlag
+
 ![flag](./img/21.png)
